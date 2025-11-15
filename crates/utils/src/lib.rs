@@ -150,7 +150,7 @@ fn scan_music() -> serde_json::Value {
             "artist": artist,
             "album": album,
             "title": title,
-            "genre": genre,
+            "genre": genre.trim_start_matches(|c: char| !c.is_ascii_alphabetic()),
             "duration": duration,
             "cover":  format!("covers/{}.avif", possible_covers[random_index]),
         });
