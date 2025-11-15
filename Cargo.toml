@@ -11,6 +11,8 @@ repository = "https://github.com/RoseBlume/common-rust-modules"
 edition = "2024"
 version = "1.0.0"
 
+
+
 [profile.release]
 panic = "abort"
 codegen-units = 1
@@ -23,3 +25,5 @@ strip = true
 incremental = true
 
 
+[workspace.dependencies]
+serde_json = "1.0.145"

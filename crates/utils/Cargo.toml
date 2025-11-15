@@ -3,6 +3,5 @@ name = "utils"
 edition = "2024"
 
 [dependencies]
-serde_json = "1.0.145"
 rand = { path = "../rand" }
 meta = { path = "../meta" }
