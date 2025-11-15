@@ -1,0 +1,25 @@
+[workspace]
+members = [
+    "crates/meta", 
+    "crates/rand", 
+    "crates/utils"
+]
+
+[workspace.package]
+authors = ["James A. Rose"]
+repository = "https://github.com/RoseBlume/common-rust-modules"
+edition = "2024"
+version = "1.0.0"
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+incremental = false
+opt-level = "s"
+strip = true
+
+[profile.dev]
+incremental = true
+
+
